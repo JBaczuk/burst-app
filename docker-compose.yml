@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: Changeme1!
+      POSTGRES_USER: postgres
+      POSTGRES_DB: next-ts
+    volumes:
+      - ./pgdata:/var/lib/postresql/data
+    ports:
+      - '5432:5432'
+  app:
+    image: jbaczuk/docker-nextjs
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'
