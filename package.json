@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "apollo-server-micro": "^2.15.1",
+    "mongoose": "^5.9.21",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
